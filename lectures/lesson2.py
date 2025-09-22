@@ -1,4 +1,4 @@
-+#LESSON 2
+#LESSON 2 (8.27.25 - Wednesday)
 
 #%% Subscripts
 #review from previous lesson!!
@@ -94,32 +94,66 @@ max(10,4) #retunrns 10
 
 #min returns minimum number btw 2 numbers
 min(10,4) #returns 4
-#%%
-"""import math
-g=9.81; m=68.1; cd=0.25
-t=10
 
+#if you are smart about it:
+x = 14 ; y = 22
+max(x,y)
+
+#%% Math module
+#show blank space on source checkbox
+
+import math
+
+x = 10; b=2
+print(math.sqrt(x)) #square root
+print(math.log(x)) # ln()
+print(math.log10(x)) #log10(x)
+print(math.log(x,b)) #logb(x) where b is a number
+print(math.exp(x)) #e^x
+
+print(math.sin(x)) #sin, cos, tan, asin, acos, atan, atan2
+print(math.sinh(x)) #sinh, cosh, tanh, asinh, acosh
+
+#%% Bungee jumper velocity
+import math
+
+g = 9.81; m = 68.1; cd = 0.25
+t = 10;
+v = math.sqrt(m*g/cd)*math.tanh(math.sqrt((cd*g)/m)*t)
+#tanh is a built in function
+print(f"the speed given g={g}; m={m}; cd={cd}; t={t} is {round(v,3)}")
+#%%you could also implement a function for it and see it in the console
+
+import math
 def bungee(t):
-    g=9.81; m=68.1; cd=0.25
-    v = math.sqrt(m*g/cd)*math.tanh(math.sqrt(cd*g/m)*t)
+    g = 9.81; m=68.1; cd=0.25
+    v = math.sqrt(m*g/cd)*math.tanh(math.sqrt((cd*g)/m)*t)
     return v
+bungee(10)
+#%% lambda functions
+#can take ANY number of input arguments but ONLY ONE function can be def
+#the output is a function
+f = lambda x: x**3+x-1
+print(f(2))
 
-g=9.81; m=68.1; cd=0.25
-bungee1 = lambda t: math.sqrt(m*g/cd)*math.tanh(math.sqrt(cd*g/m)*t)
-print(bungee(10))
-print(bungee1(10))"""
+c = lambda a,b: a*b
+print(c(5,6))
+#%% In class coding practice - see slides
+import math
 
-
-import numpy as np 
-
-g = lambda x: (np.pi * x**2)/4
-
-import numpy as np
-
-def midpoint(f, x1, x2):
+g = lambda x: (math.pi*(x**2))/4 #define function
+def midpoint(f,x1,x2):
     xmid = (x1+x2)/2
-    return f(xmid)
+    return(f(xmid))
 
-print(midpoint(g, 1.5, 2.78))
-#takes midpoint value between 1.5 and 2.78 and then plugs into the earlier function g!
+g1 = midpoint(g,1.5,2.78)
+print(g1)
+
+#apply the midpoint function created to another function
+
+def h(w):
+    return np.sin(w)*np.cosh(w)-5
+#you could do the same thing using lambda a lil faster!
+fmid = midpoint(h,0,3)
+print('function value at midpoint =' , fmid)
 

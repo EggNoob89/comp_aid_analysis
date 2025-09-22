@@ -1,3 +1,5 @@
+#LESSON 12 (9.22.25 - Monday)
+
 #%% In class Practice
 
 import numpy as np

@@ -1,4 +1,4 @@
-#LESSON 8
+#LESSON 8 (9.12.25 - Friday)
 
 #%% Bisection Method: PYTHON Code
 

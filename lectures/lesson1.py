@@ -1,4 +1,4 @@
-#LESSON 1
+#LESSON 1 (8.25.25 - Monday)
 
 #Went over syllabus
 

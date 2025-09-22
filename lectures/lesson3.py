@@ -1,3 +1,18 @@
+#LESSON 3 (8.29.25 - Friday)
+
+#%% In class coding practice 
+#remember last lesson (Review)
+import math
+
+g = lambda x: (math.pi*(x**2))/4 #define function
+def midpoint(f,x1,x2):
+    xmid = (x1+x2)/2
+    return(f(xmid))
+
+g1 = midpoint(g,1.5,2.78)
+print(g1)
+#%%
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
