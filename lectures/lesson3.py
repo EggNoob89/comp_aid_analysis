@@ -11,8 +11,16 @@ def midpoint(f,x1,x2):
 
 g1 = midpoint(g,1.5,2.78)
 print(g1)
-#%%
 
+#apply midpoint on another function 
+
+def h(w):
+    return np.sin(w)*np.cosh(w)-5
+
+fmid = midpoint(h, 0, 3)
+print('function value at midpoint =', fmid)
+
+#%%
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """

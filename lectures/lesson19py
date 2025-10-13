@@ -1,0 +1,20 @@
+#LESSON 19 (10.13.25 - Friday)
+
+import numpy as np
+x1=1.5; x2=3.5 #initial values
+# initialize
+es=0.5; mxea=100 # max of ea1, ea2, ea3, ...
+i=0; maxiter=30 # need this as Newton Raphson may diverge
+while mxea>es and i< maxiter:
+    i=i+1 #increment counter
+    f=np.matrix([[x1**2+x1*x2-10],[x2+3*x1*x2**2-57]]) # vector function, f is a column
+    J=np.matrix([[2*x1+x2, x1],[3*x2**2,1+6*x1*x2]]) #Jacobian matrix (square matrix)
+    OLD=np.matrix([[x1],[x2]]) #save old values, must be column
+    NEW=OLD-np.linalg.solve(J,f) # make new guess, Cramer’s rule for handwork only!
+    ea=abs((NEW-OLD)/NEW)*100 # compute relative errors
+    mxea=np.max(ea) # extract largest error
+    x1=NEW[0,0]; x2=NEW[1,0];
+if i == maxiter:
+    print('no convergence')
+else:
+    print('x1={0:.4f},\nx2={1:.4f}'.format(x1,x2))
