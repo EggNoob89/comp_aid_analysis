@@ -1,4 +1,4 @@
-#LESSON 18 (10.10.25 - Friday)
+#LESSON 19 (10.10.25 - Friday)
 
 import numpy as np
 x1=1.5; x2=3.5 #initial values
