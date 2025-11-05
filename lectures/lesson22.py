@@ -1,5 +1,5 @@
 #Lesson 22
-
+#Interpolation w Pyhton
 import pylab as pl
 import numpy as np
 x=np.array([1.2, 2, 3, 3.5, 4])
@@ -18,7 +18,8 @@ pl.scatter(x,y) #discrete data
 xx=np.linspace(1.2, 4); yy=f(xx); pl.plot(xx,yy,'r')
 pl.legend(['data', 'interpolating polynomial'])
 
-#%%
+#%% Interpolation w Python 
+#use polyfit and polyval
 import pylab as pl
 import numpy as np
 x=np.array([1.2, 2, 3, 3.5, 4])
