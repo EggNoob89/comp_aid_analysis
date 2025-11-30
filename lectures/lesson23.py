@@ -1,5 +1,7 @@
 #Lesson 23
 
+# Polynomial Interpolation in class practice
+
 import pylab as pl
 import numpy as np
 x=np.array([1, 4, 7,10 , 14, 18])
@@ -16,6 +18,8 @@ pl.legend(['data', 'interpolating polynomial'])
 
 #%%
 
+#Polynomial Interpolation w built-in functions in class practice
+
 import pylab as pl
 import numpy as np
 x=np.array([1, 4, 7,10 , 14, 18])
@@ -27,22 +31,32 @@ xx=np.linspace(np.min(x), np.max(x)); yy=np.polyval(a, xx)
 pl.plot(xx,yy)
 pl.legend(['data', 'interpolating polynomial'])
 
-#%%
+#%% Piecewise Interpolation - Linear Splines
+
 import pylab as pl
 import numpy as np
 from scipy.interpolate import interp1d
+
 x=np.array([1.2, 2, 3, 3.5, 4])
 y=np.array([3, 24, 30, 42, 132])
 # linear spline piecewise function
-fl=interp1d(x, y, kind='linear')
+fl=interp1d(x, y, kind='linear') 
+#built in function interp1d
+
 # interpolate
 x_in=1.7
 y_in=fl(x_in)
+print(y_in)
+
 #Plotting
 pl.scatter(x,y, color='r') #discrete data
 xx=np.linspace(1.2, 4); yy=fl(xx); pl.plot(xx,yy)
 pl.legend(['data', 'linear spline'])
-#%%
+
+#%% Piecewise Interpolation - Cubic Splines
+#Not a knot
+
+
 import pylab as pl
 import numpy as np
 from scipy.interpolate import interp1d

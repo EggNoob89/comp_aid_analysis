@@ -1,4 +1,4 @@
-#lesson 26 
+#lesson 26 implement r^2
 import numpy as np
 x=np.array([1,2,3,4,5,6,7,8,9,10])
 y=np.array([12,15,16,18,19,20,22,31,38,42])

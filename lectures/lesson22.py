@@ -1,5 +1,7 @@
 #Lesson 22
-#Interpolation w Pyhton
+
+# Polynomial Interpolation 
+
 import pylab as pl
 import numpy as np
 x=np.array([1.2, 2, 3, 3.5, 4])
@@ -18,13 +20,15 @@ pl.scatter(x,y) #discrete data
 xx=np.linspace(1.2, 4); yy=f(xx); pl.plot(xx,yy,'r')
 pl.legend(['data', 'interpolating polynomial'])
 
-#%% Interpolation w Python 
-#use polyfit and polyval
+#%% # Polynomial Interpolation w built-in functions
+#built-in functions: polyfit and polyval
+
 import pylab as pl
 import numpy as np
 x=np.array([1.2, 2, 3, 3.5, 4])
 y=np.array([3, 24, 30, 42, 132])
 a=np.polyfit(x,y,4) #degree of polynomial is 4
+
 #Plotting
 pl.scatter(x,y, color='r') #discrete data
 xx=np.linspace(np.min(x), np.max(x));
